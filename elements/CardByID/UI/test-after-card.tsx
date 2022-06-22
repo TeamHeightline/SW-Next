@@ -9,7 +9,7 @@ interface ITestAfterCardProps extends PaperProps {
 
 export default function TestAfterCard({cardData, ...props}: ITestAfterCardProps) {
     const router = useRouter()
-    if (!cardData.test_in_card_id) {
+    if (!cardData?.test_in_card_id) {
         return <div/>
     }
     return (
