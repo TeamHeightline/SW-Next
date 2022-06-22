@@ -9,15 +9,19 @@ import Paper from "@mui/material/Paper";
 import {ICardData} from "../../../server-layer/types/card";
 
 interface ITitleAndNavigationProps extends PaperProps {
-    cardData: ICardData
+    cardData: ICardData,
+    courseNavigation?: any
 }
 
-export function TitleAndNavigation({cardData, ...props}: ITitleAndNavigationProps) {
+export function TitleAndNavigation({cardData, courseNavigation, ...props}: ITitleAndNavigationProps) {
     return (
         <Paper elevation={0} {...props}>
             <Stack
                 direction={"column"} spacing={2}>
-                <DefaultCardNavigation cardData={cardData}/>
+                {!!courseNavigation ?
+                    courseNavigation :
+                    <DefaultCardNavigation cardData={cardData}/>}
+
                 <Stack direction={"column"}>
                     <CardTitleWithId cardData={cardData}/>
                     <CardCopyright cardData={cardData}/>

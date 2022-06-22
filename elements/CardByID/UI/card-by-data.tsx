@@ -1,25 +1,25 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
 import CardContentAndDescription from "./card-content-and-description";
 import {ICardData} from "../../../server-layer/types/card";
 import {TitleAndNavigation} from "./title-and-navigation";
-import {Grid, Stack} from "@mui/material";
-import CardFindInCourse from "./card-find-in-course";
-import CardAuthorNavigation from "./card-author-navigation";
+import {Grid} from "@mui/material";
 import CardNavigationRatingFind from "./card-navigation-rating-find-in-course";
 
 
 interface ICardByIDProps extends PaperProps {
-    cardData: ICardData
+    cardData: ICardData,
+    courseNavigation?: any
 }
 
-export function CardByData({cardData}: ICardByIDProps) {
+export function CardByData({cardData, courseNavigation}: ICardByIDProps) {
 
     return (
         <div>
             <Grid sx={{p: {md: 4, xs: 1}}}>
 
                 <TitleAndNavigation
+                    courseNavigation={courseNavigation}
                     sx={{pt: 1}}
                     cardData={cardData}
                 />
