@@ -16,14 +16,19 @@ export default function CardTitleWithId({cardData, ...props}: ICardTitleProps) {
         <Stack direction={{xs: "column", md: "row"}}>
             <Typography
                 id={"card-title"}
-                variant={isMobile ? "h6" : "h4"}>
+                variant={isMobile ? "h6" : "h4"}
+                // variant={{xs: "h6", md: "h4"}}
+            >
                 {title}
+                {/*<Typography*/}
+                {/*    id={"card-id"}*/}
+                {/*    variant={"body2"}*/}
+                {/*    // variant={{xs: "h6", md: "h4"}}*/}
+                {/*>*/}
+                {/*    {card_id}*/}
+                {/*</Typography>*/}
             </Typography>
-            <Typography
-                id={"card-id"}
-                variant={isMobile ? "subtitle2" : "subtitle1"}>
-                {card_id}
-            </Typography>
+
         </Stack>
     )
 }

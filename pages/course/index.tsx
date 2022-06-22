@@ -3,6 +3,7 @@ import {ICourseData, ICoursePosition} from "../../server-layer/types/course";
 import {ICardData} from "../../server-layer/types/card";
 import CourseByData from "../../elements/CourseByData/V2/UI/CourseMicroView";
 import {CardByData} from "../../elements/CardByID/UI/card-by-data";
+import {Grid} from "@mui/material";
 
 export async function getServerSideProps(context: any) {
     const coursePosition = context.query
@@ -31,7 +32,9 @@ export default function CourseByPosition({courseData, cardData, coursePosition}:
     if (!cardData) {
         return (
             <div>
-                <CourseByData courseData={courseData} coursePosition={coursePosition}/>
+                <Grid sx={{p: {md: 4, xs: 1}}}>
+                    <CourseByData courseData={courseData} coursePosition={coursePosition}/>
+                </Grid>
             </div>
         )
     }

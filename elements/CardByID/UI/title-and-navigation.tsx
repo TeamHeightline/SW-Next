@@ -17,9 +17,11 @@ export function TitleAndNavigation({cardData, courseNavigation, ...props}: ITitl
     return (
         <Paper elevation={0} {...props}>
             <Stack
-                direction={"column"} spacing={2}>
+                direction={{xs: "column", md: "row"}} spacing={2}>
                 {!!courseNavigation ?
-                    courseNavigation :
+                    <div style={{width: 500}}>
+                        {courseNavigation}
+                    </div> :
                     <DefaultCardNavigation cardData={cardData}/>}
 
                 <Stack direction={"column"}>
