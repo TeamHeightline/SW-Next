@@ -5,6 +5,7 @@ import {ICardData} from "../../../server-layer/types/card";
 import {TitleAndNavigation} from "./title-and-navigation";
 import {Grid} from "@mui/material";
 import CardNavigationRatingFind from "./card-navigation-rating-find-in-course";
+import TestAfterCard from "./test-after-card";
 
 
 interface ICardByIDProps extends PaperProps {
@@ -25,6 +26,7 @@ export function CardByData({cardData, courseNavigation}: ICardByIDProps) {
                 />
                 <CardContentAndDescription cardData={cardData} sx={{pt: 1}}/>
                 <CardNavigationRatingFind cardData={cardData}/>
+                <TestAfterCard cardData={cardData}/>
 
                 {/*<SimilarCards card_store={cardStore} sx={{pt: 1}}/>*/}
 
