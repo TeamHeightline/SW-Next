@@ -16,7 +16,8 @@ export default function CardTitleWithId({cardData, ...props}: ICardTitleProps) {
         <Stack direction={{xs: "column", md: "row"}}>
             <Typography
                 id={"card-title"}
-                variant={isMobile ? "h6" : "h4"}
+                sx={{fontSize: {xs: "1.25rem", md: "2rem"}}}
+                // variant={isMobile ? "h6" : "h4"}
                 // variant={{xs: "h6", md: "h4"}}
             >
                 {title}

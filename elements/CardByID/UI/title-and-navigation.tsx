@@ -7,6 +7,7 @@ import CardTheme from "./card-theme";
 import {PaperProps} from "@mui/material/Paper/Paper";
 import Paper from "@mui/material/Paper";
 import {ICardData} from "../../../server-layer/types/card";
+import Box from "@mui/material/Box";
 
 interface ITitleAndNavigationProps extends PaperProps {
     cardData: ICardData,
@@ -19,9 +20,9 @@ export function TitleAndNavigation({cardData, courseNavigation, ...props}: ITitl
             <Stack
                 direction={{xs: "column", md: "row"}} spacing={2}>
                 {!!courseNavigation ?
-                    <div style={{width: 500}}>
+                    <Box sx={{overflow: "auto", width: {sx: "auto", md: 730}}}>
                         {courseNavigation}
-                    </div> :
+                    </Box> :
                     <DefaultCardNavigation cardData={cardData}/>}
 
                 <Stack direction={"column"}>

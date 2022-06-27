@@ -1,6 +1,6 @@
 {
-  "name": "sw-embedded",
-  "version": "0.1.0",
+  "name": "sw-mini",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
