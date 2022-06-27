@@ -1,7 +1,6 @@
 import {AppBar, Button, Paper, Stack, Toolbar, Typography} from "@mui/material";
 import {PaperProps} from "@mui/material/Paper/Paper";
 import {useRouter} from "next/router";
-import {useUser} from '@auth0/nextjs-auth0';
 
 interface INavbarProps extends PaperProps {
 
@@ -10,7 +9,6 @@ interface INavbarProps extends PaperProps {
 
 export default function Navbar({...props}: INavbarProps) {
     const router = useRouter()
-    const {user} = useUser();
 
     return (
         <Paper elevation={0} sx={{mb: 4}}>
