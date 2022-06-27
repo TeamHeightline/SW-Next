@@ -10,7 +10,6 @@ interface INavbarProps extends PaperProps {
 
 export default function Navbar({...props}: INavbarProps) {
     const router = useRouter()
-    console.log(router)
     return (
         <Paper elevation={0} sx={{mb: 4}}>
             <Box sx={{display: {xs: 'none', sm: 'block'}}}>
