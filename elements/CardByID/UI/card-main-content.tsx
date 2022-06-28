@@ -1,9 +1,10 @@
 import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
-import {NoSsr, Paper} from "@mui/material";
+import {NoSsr} from "@mui/material";
 import YoutubeContent from "./youtube-content";
 import CardImage from "./card-image";
 import {ICardData} from "../../../server-layer/types/card";
+import YoutubeSSRFallback from "./youtube-ssr-fallback";
 
 
 interface ICardMainContentProps extends PaperProps {
@@ -20,7 +21,7 @@ export default function CardMainContent({cardData, ...props}: ICardMainContentPr
     return (
         <div>
             {isYoutubeContentType &&
-                <NoSsr>
+                <NoSsr fallback={<YoutubeSSRFallback cardData={cardData}/>}>
                     <YoutubeContent cardData={cardData}/>
                 </NoSsr>}
             {isShowImageContent &&
