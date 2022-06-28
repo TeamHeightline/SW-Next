@@ -8,7 +8,7 @@ interface IAuthorProps extends PaperProps {
 export default function Author({...props}: IAuthorProps) {
     return (
         <Paper elevation={0} {...props}>
-            <Chip variant="outlined" size="small" label="teamheightline@mail.ru" color="secondary"/>
+            <Chip variant="outlined" label="teamheightline@mail.ru" color="secondary"/>
         </Paper>
     )
 }

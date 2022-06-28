@@ -17,7 +17,7 @@ export default function Masonry1({...props}: IFirstGenerationMasonryProps) {
             <Masonry columns={2} spacing={2} sx={{width: "100%"}}>
                 {[firstTestImage, firstTestEditorImage, firstTestEditorPageImage].map((i, index) => (
                     <Box>
-                        <Image key={index} src={i} width={1200} height={800}/>
+                        <Image key={index + "m1"} src={i} width={1200} height={800}/>
                     </Box>
                 ))}
             </Masonry>
