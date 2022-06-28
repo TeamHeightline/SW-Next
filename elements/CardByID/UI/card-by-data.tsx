@@ -6,6 +6,7 @@ import {TitleAndNavigation} from "./title-and-navigation";
 import {Grid} from "@mui/material";
 import CardNavigationRatingFind from "./card-navigation-rating-find-in-course";
 import TestAfterCard from "./test-after-card";
+import CardSEO from "./card-SEO";
 
 
 interface ICardByIDProps extends PaperProps {
@@ -17,6 +18,7 @@ export function CardByData({cardData, courseNavigation}: ICardByIDProps) {
 
     return (
         <div>
+            <CardSEO cardData={cardData}/>
             <Grid sx={{p: {md: 4, xs: 1}}}>
 
                 <TitleAndNavigation

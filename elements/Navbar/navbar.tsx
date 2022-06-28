@@ -2,6 +2,7 @@ import {AppBar, Button, Paper, Stack, Toolbar, Typography} from "@mui/material";
 import {PaperProps} from "@mui/material/Paper/Paper";
 import {useRouter} from "next/router";
 import Box from '@mui/material/Box';
+import Head from 'next/head'
 
 interface INavbarProps extends PaperProps {
 
@@ -12,6 +13,11 @@ export default function Navbar({...props}: INavbarProps) {
     const router = useRouter()
     return (
         <Paper elevation={0} sx={{mb: 4}}>
+            <div>
+                <Head>
+                    <title>SW Mini</title>
+                </Head>
+            </div>
             <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                 <AppBar position="fixed" enableColorOnDark>
                     <Toolbar variant="dense">
