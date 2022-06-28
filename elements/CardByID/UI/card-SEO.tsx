@@ -17,6 +17,9 @@ export default function CardSEO({cardData, ...props}: ICardSEOProps) {
                 {cardData?.title}
             </title>
             <meta name="description" content={clearText} key="desc"/>
+            <meta name="keywords" content={cardData?.tag_field}/>
+            <meta charSet="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
             {/*Метаданные для феисбука*/}
 
