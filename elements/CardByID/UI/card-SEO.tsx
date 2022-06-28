@@ -8,7 +8,7 @@ interface ICardSEOProps extends PaperProps {
 }
 
 export default function CardSEO({cardData, ...props}: ICardSEOProps) {
-    const clearText = cardData?.text?.replace(/<\/?[^>]+(>|$)/g, "")
+    const clearText = cardData?.text?.replace(/<\/?[^>]+(>|$)/g, "") || ""
     return (
         <Head>
 
@@ -42,7 +42,7 @@ export default function CardSEO({cardData, ...props}: ICardSEOProps) {
                     "@type": "LearningResource",
                   
                    "articleBody": "${clearText}",
-                    "name": ${cardData.title},
+                    "name": ${cardData?.title},
                     "publisher": "Study Ways"
                 }`
                 }}
