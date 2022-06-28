@@ -23,12 +23,12 @@ interface IMasonry3Props extends PaperProps {
 export default function Masonry3({...props}: IMasonry3Props) {
     return (
         <Paper elevation={0} {...props}>
-            <Masonry quality={40} placeholder={"blur"}
-                     columns={2} spacing={2} sx={{width: "100%"}}>
+            <Masonry columns={2} spacing={2} sx={{width: "100%"}}>
                 {[I3_1, I3_2, I3_3, I3_4, I3_5, I3_6, I3_7, I3_8, I3_9, I3_10, I3_11, I3_12]
                     .map((i, index) => (
                         <Box>
-                            <Image key={index} src={i} width={1200} height={800}/>
+                            <Image quality={40} placeholder={"blur"}
+                                   key={index} src={i} width={1200} height={800}/>
                         </Box>
                     ))}
             </Masonry>
