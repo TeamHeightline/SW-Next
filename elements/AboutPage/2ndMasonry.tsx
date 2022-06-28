@@ -20,8 +20,8 @@ export default function Masonry2({...props}: I2ndMasonryProps) {
                 {[I2_1, I2_2, I2_3, I2_4, I2_5]
                     .map((i, index) => (
                         <Box>
-                            <Image quality={25} placeholder={"blur"}
-                                   key={index} src={i} width={1200} height={800}/>
+                            <Image quality={2} placeholder={"blur"} loading="lazy"
+                                   key={index} src={i}/>
                         </Box>
                     ))}
             </Masonry>
