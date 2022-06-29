@@ -4,6 +4,7 @@ import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeft
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import {ICardData} from "../../../server-layer/types/card";
 import {useRouter} from "next/router";
+import Link from "next/link";
 
 interface IDefaultCardNavigationProps extends React.HTMLAttributes<HTMLDivElement> {
     cardData: ICardData
@@ -30,16 +31,16 @@ export default function DefaultCardNavigation({cardData, ...props}: IDefaultCard
                     color="primary"
                     aria-label="group"
                     id={"btn-group-for-card-page"}>
-                    <Button onClick={() => {
-                        goToCard(-1)
-                    }}>
-                        <KeyboardArrowLeftOutlinedIcon/>
-                    </Button>
-                    <Button onClick={() => {
-                        goToCard(1)
-                    }}>
-                        <KeyboardArrowRightOutlinedIcon/>
-                    </Button>
+                    <Link href={"/card/" + String(Number(card_id) - 1)} passHref>
+                        <Button>
+                            <KeyboardArrowLeftOutlinedIcon/>
+                        </Button>
+                    </Link>
+                    <Link href={"/card/" + String(Number(card_id) + 1)} passHref>
+                        <Button>
+                            <KeyboardArrowRightOutlinedIcon/>
+                        </Button>
+                    </Link>
                 </ButtonGroup>
 
             </Stack>

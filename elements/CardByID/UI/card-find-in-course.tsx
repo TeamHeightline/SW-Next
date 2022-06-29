@@ -3,6 +3,7 @@ import {PaperProps} from "@mui/material/Paper/Paper";
 import {Alert, AlertTitle, Button, Paper, Stack, Typography} from "@mui/material";
 import {ICardData} from "../../../server-layer/types/card";
 import {useRouter} from "next/router";
+import Link from "next/link";
 
 
 interface ICardFindInCourseProps extends PaperProps {
@@ -31,18 +32,16 @@ export default function CardFindInCourse({cardData, ...props}: ICardFindInCourse
                             <Stack direction={{xs: "column-reverse", md: "row"}}
                                    alignItems={{md: "center", xs: "start"}}
                                    justifyContent={"start"}>
-                                <Button title={"Перейти"}
-                                        color={"info"}
-                                        onClick={() => {
-                                            router.push("/course?" + "id=" + course.course_id +
-                                                "&activePage=" + course.position.activePage +
-                                                "&selectedPage=" + course.position.selectedPage +
-                                                "&selectedRow=" + course.position.selectedRow +
-                                                "&selectedIndex=" + course.position.selectedIndex)
-
-                                        }}>
-                                    Перейти
-                                </Button>
+                                <Link href={"/course?" + "id=" + course.course_id +
+                                    "&activePage=" + course.position.activePage +
+                                    "&selectedPage=" + course.position.selectedPage +
+                                    "&selectedRow=" + course.position.selectedRow +
+                                    "&selectedIndex=" + course.position.selectedIndex} passHref>
+                                    <Button title={"Перейти"}
+                                            color={"info"}>
+                                        Перейти
+                                    </Button>
+                                </Link>
                                 <Typography variant={"body2"}>{course.course_name}</Typography>
                             </Stack>
                         </Stack>)
