@@ -1,8 +1,9 @@
-import {Grid, Paper, Typography} from "@mui/material";
+import {Grid, Paper, Stack, Typography} from "@mui/material";
 import {PaperProps} from "@mui/material/Paper/Paper";
 import Story from "./story";
 import Author from "./author";
 import Head from 'next/head'
+import GoToCardPage from "./go-to-card-page";
 
 interface IAboutPageProps extends PaperProps {
 
@@ -35,7 +36,11 @@ export default function AboutPage({...props}: IAboutPageProps) {
                         возможности
                         по получению информации и оценки знаний.
                     </Typography>
-                    <Author/>
+                    <Stack direction={"row"} spacing={1} alignItems={"center"}>
+                        <Author/>
+                        <GoToCardPage/>
+                    </Stack>
+
 
                 </Grid>
             </Grid>
