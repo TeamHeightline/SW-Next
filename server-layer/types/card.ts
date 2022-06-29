@@ -56,3 +56,11 @@ export interface ICardData {
         card_id: number
     }
 }
+
+interface cards_unstructuredtheme {
+    text: string
+}
+
+export interface ICardDataWithTheme extends ICardData {
+    cards_card_connected_theme: cards_unstructuredtheme[]
+}
