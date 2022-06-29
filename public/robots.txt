@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mini.sw-university.com
+
+# Sitemaps
+Sitemap: https://mini.sw-university.com/sitemap.xml
