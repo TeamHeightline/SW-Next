@@ -1,7 +1,5 @@
-import {Paper} from "@mui/material";
 import {PaperProps} from "@mui/material/Paper/Paper";
 import axiosClient from "../../server-layer/config";
-import {useRouter} from "next/router";
 import {CardByData} from "../../elements/CardByID/UI/card-by-data";
 import {ICardData} from "../../server-layer/types/card";
 
@@ -32,6 +30,8 @@ export async function getStaticPaths() {
         fallback: true
     }
 }
+
+export const config = {amp: "hybrid"};
 
 export default function CardByURL({cardData}: ICardByURLProps) {
     return (

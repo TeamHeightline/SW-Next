@@ -28,6 +28,8 @@ interface ICourseByPosition {
     cardData: ICardData
 }
 
+export const config = {amp: "hybrid"};
+
 export default function CourseByPosition({courseData, cardData, coursePosition}: ICourseByPosition) {
     if (!cardData) {
         return (
