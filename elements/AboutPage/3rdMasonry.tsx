@@ -26,9 +26,9 @@ export default function Masonry3({...props}: IMasonry3Props) {
             <Masonry columns={2} spacing={2} sx={{width: "100%"}}>
                 {[I3_1, I3_2, I3_3, I3_4, I3_5, I3_6, I3_7, I3_8, I3_9, I3_10, I3_11, I3_12]
                     .map((i, index) => (
-                        <Box>
+                        <Box key={index}>
                             <Image quality={1} placeholder={"blur"} loading="lazy"
-                                   key={index} src={i}/>
+                                   src={i}/>
                         </Box>
                     ))}
             </Masonry>

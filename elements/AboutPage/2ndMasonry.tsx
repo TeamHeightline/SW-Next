@@ -19,9 +19,9 @@ export default function Masonry2({...props}: I2ndMasonryProps) {
             <Masonry columns={2} spacing={2} sx={{width: "100%"}}>
                 {[I2_1, I2_2, I2_3, I2_4, I2_5]
                     .map((i, index) => (
-                        <Box>
+                        <Box key={index}>
                             <Image quality={2} placeholder={"blur"} loading="lazy"
-                                   key={index} src={i}/>
+                                   src={i}/>
                         </Box>
                     ))}
             </Masonry>

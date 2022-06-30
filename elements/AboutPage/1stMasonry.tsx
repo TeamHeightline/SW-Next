@@ -16,8 +16,8 @@ export default function Masonry1({...props}: IFirstGenerationMasonryProps) {
         <Paper elevation={0} {...props}>
             <Masonry columns={2} spacing={2} sx={{width: "100%"}}>
                 {[firstTestImage, firstTestEditorImage, firstTestEditorPageImage].map((i, index) => (
-                    <Box>
-                        <Image quality={50} placeholder={"blur"} key={index + "m1"} src={i}/>
+                    <Box key={index + "m1"}>
+                        <Image quality={50} placeholder={"blur"} src={i}/>
                     </Box>
                 ))}
             </Masonry>
