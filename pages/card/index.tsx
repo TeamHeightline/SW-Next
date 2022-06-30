@@ -4,6 +4,7 @@ import {ICardDataWithTheme} from "../../server-layer/types/card";
 import CardMicroView from "../../elements/CardMicroByData/card-micro-by-data";
 import {Grid} from "@mui/material";
 import NextPagination from "../../elements/Pagination/next-paginetion";
+import Head from 'next/head'
 
 // @ts-ignore
 export async function getStaticProps({params}) {
@@ -37,8 +38,16 @@ interface IMainCardPageProps extends PaperProps {
 
 
 export default function MainCardPage({allCardData, page, maxPage}: IMainCardPageProps) {
+    const allCardTitleText = allCardData?.map((cardData) => cardData?.title).join(", ")
     return (
         <div>
+            <Head>
+                <title>
+                    Все карточки Study Ways
+                </title>
+                <meta name="description" content={allCardTitleText} key="desc"/>
+
+            </Head>
             <Grid container spacing={2} sx={{mt: 6}}>
                 {allCardData?.map((cardData, index) => (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
