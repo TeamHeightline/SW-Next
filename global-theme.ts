@@ -98,51 +98,6 @@ class ThemeStore {
                     styleOverrides: {
                         body: {
                             backgroundColor: this.backgroundColor,
-                            "--ck-color-base-border": this.backgroundColor,
-                            ".ck.ck-editor__main>.ck-editor__editable:not(.ck-focused)": {
-                                borderColor: this.backgroundColor
-                            },
-                            scrollbarColor: this.backgroundColor,
-                            "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
-                                backgroundColor: this.backgroundColor,
-                                width: "8px"
-                            },
-                            "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
-                                borderRadius: "10px",
-                                backgroundColor: this.backgroundColor,
-                                border: "1px solid #2296F3"
-                            },
-                            ".ck-editor": {
-                                "--ck-color-toolbar-background": this.backgroundColor,
-                                "--ck-color-toolbar-border": this.backgroundColor,
-                                "--ck-color-input-disabled-text": this.textColor,
-                                "--ck-color-text": this.textColor,
-                            },
-                            ".ck-content": {
-                                color: this.textColor,
-                                backgroundColor: this.backgroundColor
-                            },
-                            "ck-editor__editable_inline": {
-                                "--ck-color-toolbar-background": this.backgroundColor,
-                                "--ck-color-base-background": this.backgroundColor,
-                                "--ck-color-base-border": this.backgroundColor,
-                                "--ck-color-text": this.textColor,
-                                "--ck-color-input-text": this.textColor,
-                                "--ck-color-input-disabled-text": this.textColor,
-                                borderColor: this.backgroundColor
-                            },
-                            "ck-editor": {
-                                "--ck-color-toolbar-background": this.backgroundColor,
-                                "--ck-color-base-background": this.backgroundColor,
-                                "--ck-color-base-border": this.backgroundColor
-                            },
-                            ".ck-widget": {
-                                filter: "invert(1)"
-                            },
-                            //делает все подписи в статистике белыми
-                            ".Component-root-4": {
-                                filter: "invert(1)"
-                            }
                         }
                     },
                 },
