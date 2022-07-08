@@ -11,11 +11,6 @@ interface ICardSEOProps extends PaperProps {
 export default function CardSEO({cardData, ...props}: ICardSEOProps) {
     const isAMP = useAmp()
     const clearText = cardData?.text?.replace(/<\/?[^>]+(>|$)/g, "") || ""
-    if (isAMP) {
-        return (
-            <div/>
-        )
-    }
     return (
         <Head>
 
@@ -39,21 +34,24 @@ export default function CardSEO({cardData, ...props}: ICardSEOProps) {
                 content={FILE_URL + cardData?.cards_cardimage?.image}
             />
 
-            {/* JSON-LD данные */}
-            {/*<script*/}
-            {/*    type="application/ld+json"*/}
-            {/*    dangerouslySetInnerHTML={{*/}
-            {/*        __html: `{*/}
-            {/*        "@context": "https://schema.org",*/}
-            {/*        "@type": "LearningResource",*/}
-            {/*      */}
-            {/*       "articleBody": "${clearText}",*/}
-            {/*        "name": ${cardData?.title},*/}
-            {/*        "publisher": "Study Ways"*/}
-            {/*    }`*/}
-            {/*    }}*/}
-            {/*    key="product-jsonld"*/}
-            {/*/>*/}
+            {/*JSON-LD данные */}
+
+            {!isAMP &&
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: `{
+                    "@context": "https://schema.org",
+                    "@type": "LearningResource",
+                  
+                   "articleBody": "${clearText}",
+                    "name": ${cardData?.title},
+                    "publisher": "Study Ways"
+                }`
+                    }}
+                    key="product-jsonld"
+                />
+            }
 
 
         </Head>
