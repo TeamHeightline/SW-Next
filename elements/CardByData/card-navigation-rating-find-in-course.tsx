@@ -1,10 +1,10 @@
 import {observer} from "mobx-react";
 import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
-import {Grid, Paper, Stack} from "@mui/material";
+import {Grid, Paper} from "@mui/material";
 import CardAuthorNavigation from "./card-author-navigation";
 import CardFindInCourse from "./card-find-in-course";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 
 
 interface ICardNavigationRatingFindProps extends PaperProps {

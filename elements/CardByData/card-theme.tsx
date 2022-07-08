@@ -2,7 +2,7 @@ import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
 import {Paper, Stack, Typography,} from "@mui/material";
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 
 interface ICardThemeProps extends PaperProps {
     cardData: ICardData

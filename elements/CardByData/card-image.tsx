@@ -1,8 +1,8 @@
 import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
 import {Card, CardActionArea} from "@mui/material";
-import {ICardData} from "../../../server-layer/types/card";
-import {FILE_URL} from "../../../settings";
+import {ICardData} from "../../server-layer/types/card";
+import {FILE_URL} from "../../settings";
 
 
 interface ICardImageProps extends PaperProps {

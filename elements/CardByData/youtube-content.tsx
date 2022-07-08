@@ -1,7 +1,7 @@
 import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
 // import ReactPlayer from "react-player";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 import {default as _ReactPlayer} from 'react-player';
 import {ReactPlayerProps} from "react-player/types/lib";
 import {useAmp} from "next/amp";

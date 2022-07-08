@@ -1,7 +1,7 @@
 import {PaperProps} from "@mui/material/Paper/Paper";
 import Head from 'next/head'
-import {ICardData} from "../../../server-layer/types/card";
-import {FILE_URL} from "../../../settings";
+import {ICardData} from "../../server-layer/types/card";
+import {FILE_URL} from "../../settings";
 import {useAmp} from "next/amp";
 
 interface ICardSEOProps extends PaperProps {

@@ -2,7 +2,7 @@ import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
 import YoutubeContent from "./youtube-content";
 import CardImage from "./card-image";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 
 
 interface ICardMainContentProps extends PaperProps {

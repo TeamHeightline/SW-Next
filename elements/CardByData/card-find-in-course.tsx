@@ -1,7 +1,7 @@
 import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
 import {Alert, AlertTitle, Button, Paper, Stack, Typography} from "@mui/material";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 import {useRouter} from "next/router";
 import Link from "next/link";
 

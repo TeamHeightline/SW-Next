@@ -1,7 +1,7 @@
 import React from 'react';
 import {Tooltip, Typography} from "@mui/material";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 
 interface ICardCopyrightProps extends React.HTMLAttributes<HTMLDivElement> {
     cardData: ICardData

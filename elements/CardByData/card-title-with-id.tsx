@@ -1,6 +1,6 @@
 import React from 'react';
 import {Stack, Typography} from "@mui/material";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 
 interface ICardTitleProps extends React.HTMLAttributes<HTMLDivElement> {
     cardData: ICardData

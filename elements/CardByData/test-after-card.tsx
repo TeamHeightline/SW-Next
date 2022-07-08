@@ -1,6 +1,6 @@
 import {Button, Paper} from "@mui/material";
 import {PaperProps} from "@mui/material/Paper/Paper";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 import Link from "next/link";
 
 interface ITestAfterCardProps extends PaperProps {

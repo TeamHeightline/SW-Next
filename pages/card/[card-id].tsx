@@ -1,6 +1,6 @@
 import {PaperProps} from "@mui/material/Paper/Paper";
 import axiosClient from "../../server-layer/config";
-import {CardByData} from "../../elements/CardByID/UI/card-by-data";
+import {CardByData} from "../../elements/CardByData/card-by-data";
 import {ICardData} from "../../server-layer/types/card";
 
 interface ICardByURLProps extends PaperProps {
@@ -17,6 +17,7 @@ export async function getStaticProps(context: any) {
         props: {
             cardData,
         },
+        revalidate: 43200
     };
 }
 
@@ -27,7 +28,7 @@ export async function getStaticPaths() {
         paths: allCardIDArray.map((cardID) => {
             return ({params: {"card-id": String(cardID)}})
         }),
-        fallback: true
+        fallback: true,
     }
 }
 

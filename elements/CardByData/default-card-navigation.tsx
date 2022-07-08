@@ -2,8 +2,7 @@ import React from 'react';
 import {Button, ButtonGroup, Stack} from "@mui/material";
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
-import {ICardData} from "../../../server-layer/types/card";
-import {useRouter} from "next/router";
+import {ICardData} from "../../server-layer/types/card";
 import Link from "next/link";
 
 interface IDefaultCardNavigationProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,15 +10,8 @@ interface IDefaultCardNavigationProps extends React.HTMLAttributes<HTMLDivElemen
 }
 
 export default function DefaultCardNavigation({cardData, ...props}: IDefaultCardNavigationProps) {
-    const router = useRouter()
-
     const card_id = Number(cardData?.id)
-    const goToCard = (stepUpID: number) => {
-        router.push("/card/" + (card_id + stepUpID))
-    }
-    const openCardForEdit = () => {
-        router.push("/editor/card2/card/" + card_id)
-    }
+
     return (
         <div {...props}>
             <Stack

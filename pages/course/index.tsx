@@ -2,7 +2,7 @@ import axiosClient from "../../server-layer/config";
 import {ICourseData, ICoursePosition} from "../../server-layer/types/course";
 import {ICardData} from "../../server-layer/types/card";
 import CourseByData from "../../elements/CourseByData/V2/UI/CourseMicroView";
-import {CardByData} from "../../elements/CardByID/UI/card-by-data";
+import {CardByData} from "../../elements/CardByData/card-by-data";
 import {Grid} from "@mui/material";
 
 export async function getServerSideProps(context: any) {

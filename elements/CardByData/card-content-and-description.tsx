@@ -1,9 +1,9 @@
 import React from 'react';
 import {PaperProps} from "@mui/material/Paper/Paper";
-import {Grid, Paper} from "@mui/material";
+import {Grid} from "@mui/material";
 import CardMainContent from "./card-main-content";
 import CardDescription from "./card-description";
-import {ICardData} from "../../../server-layer/types/card";
+import {ICardData} from "../../server-layer/types/card";
 
 
 interface ICardContentAndDescriptionProps extends PaperProps {
