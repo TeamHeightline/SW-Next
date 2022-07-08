@@ -4,6 +4,11 @@ const nextConfig = {
     // outputStandalone: true,
     images: {
         formats: ['image/avif', 'image/webp']
+    },
+    experimental: {
+        amp: {
+            skipValidation: true
+        }
     }
 }
 

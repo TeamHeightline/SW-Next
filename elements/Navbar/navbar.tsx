@@ -1,4 +1,4 @@
-import {AppBar, Button, Paper, Stack, Toolbar, Typography} from "@mui/material";
+import {AppBar, Button, Stack, Toolbar, Typography} from "@mui/material";
 import Box from '@mui/material/Box';
 import Head from 'next/head'
 import Link from "next/link";
@@ -6,13 +6,11 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <Paper elevation={0} sx={{mb: 4}}>
-            <div>
-                <Head>
-                    <title>SW Mini</title>
-                    <meta name="theme-color" content="#0A1929"/>
-                </Head>
-            </div>
+        <Box sx={{mb: 4}}>
+            <Head>
+                <title>SW Mini</title>
+                <meta name="theme-color" content="#0A1929"/>
+            </Head>
             <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                 <AppBar position="fixed" enableColorOnDark>
                     <Toolbar variant="dense">
@@ -56,6 +54,6 @@ export default function Navbar() {
                     </Button>
                 </Link>
             </Box>
-        </Paper>
+        </Box>
     )
 }
