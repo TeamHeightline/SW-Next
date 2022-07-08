@@ -93,15 +93,15 @@ class ThemeStore {
                     color: this.textColor
                 },
             },
-            components: {
-                MuiCssBaseline: {
-                    styleOverrides: {
-                        body: {
-                            backgroundColor: this.backgroundColor,
-                        }
-                    },
-                },
-            },
+            // components: {
+            //     MuiCssBaseline: {
+            //         styleOverrides: {
+            //             body: {
+            //                 backgroundColor: this.backgroundColor,
+            //             }
+            //         },
+            //     },
+            // },
         })
         return (theme)
     }

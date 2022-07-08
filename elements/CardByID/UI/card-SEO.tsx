@@ -2,13 +2,20 @@ import {PaperProps} from "@mui/material/Paper/Paper";
 import Head from 'next/head'
 import {ICardData} from "../../../server-layer/types/card";
 import {FILE_URL} from "../../../settings";
+import {useAmp} from "next/amp";
 
 interface ICardSEOProps extends PaperProps {
     cardData: ICardData
 }
 
 export default function CardSEO({cardData, ...props}: ICardSEOProps) {
+    const isAMP = useAmp()
     const clearText = cardData?.text?.replace(/<\/?[^>]+(>|$)/g, "") || ""
+    if (isAMP) {
+        return (
+            <div/>
+        )
+    }
     return (
         <Head>
 
@@ -33,20 +40,20 @@ export default function CardSEO({cardData, ...props}: ICardSEOProps) {
             />
 
             {/* JSON-LD данные */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: `{
-                    "@context": "https://schema.org",
-                    "@type": "LearningResource",
-                  
-                   "articleBody": "${clearText}",
-                    "name": ${cardData?.title},
-                    "publisher": "Study Ways"
-                }`
-                }}
-                key="product-jsonld"
-            />
+            {/*<script*/}
+            {/*    type="application/ld+json"*/}
+            {/*    dangerouslySetInnerHTML={{*/}
+            {/*        __html: `{*/}
+            {/*        "@context": "https://schema.org",*/}
+            {/*        "@type": "LearningResource",*/}
+            {/*      */}
+            {/*       "articleBody": "${clearText}",*/}
+            {/*        "name": ${cardData?.title},*/}
+            {/*        "publisher": "Study Ways"*/}
+            {/*    }`*/}
+            {/*    }}*/}
+            {/*    key="product-jsonld"*/}
+            {/*/>*/}
 
 
         </Head>
