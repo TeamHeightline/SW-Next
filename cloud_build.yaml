@@ -19,4 +19,4 @@ steps:
 images:
   - 'gcr.io/$PROJECT_ID/sw-next:$COMMIT_SHA'
 
-timeout: 1200s
+timeout: 1800s
