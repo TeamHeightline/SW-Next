@@ -36,22 +36,22 @@ export default function CardSEO({cardData, ...props}: ICardSEOProps) {
 
             {/*JSON-LD данные */}
 
-            {!isAMP &&
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: `{
-                    "@context": "https://schema.org",
-                    "@type": "LearningResource",
-                  
-                   "articleBody": "${clearText}",
-                    "name": ${cardData?.title},
-                    "publisher": "Study Ways"
-                }`
-                    }}
-                    key="product-jsonld"
-                />
-            }
+            {/*{!isAMP &&*/}
+            {/*    <script*/}
+            {/*        type="application/ld+json"*/}
+            {/*        dangerouslySetInnerHTML={{*/}
+            {/*            __html: `{*/}
+            {/*        "@context": "https://schema.org",*/}
+            {/*        "@type": "LearningResource",*/}
+            {/*      */}
+            {/*       "articleBody": "${clearText}",*/}
+            {/*        "name": ${cardData?.title},*/}
+            {/*        "publisher": "Study Ways"*/}
+            {/*    }`*/}
+            {/*        }}*/}
+            {/*        key="product-jsonld"*/}
+            {/*    />*/}
+            {/*}*/}
 
 
         </Head>

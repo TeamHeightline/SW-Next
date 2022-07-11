@@ -32,7 +32,6 @@ export async function getStaticPaths() {
     }
 }
 
-export const config = {amp: "hybrid"};
 
 export default function CardByURL({cardData}: ICardByURLProps) {
     return (

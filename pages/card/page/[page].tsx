@@ -50,7 +50,6 @@ interface IMainCardPageProps extends PaperProps {
     maxPage: number
 }
 
-export const config = {amp: "hybrid"};
 
 export default function MainCardPage({allCardData, page, maxPage}: IMainCardPageProps) {
     return (

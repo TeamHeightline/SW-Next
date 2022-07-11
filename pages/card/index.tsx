@@ -36,7 +36,6 @@ interface IMainCardPageProps extends PaperProps {
     maxPage: number
 }
 
-export const config = {amp: "hybrid"};
 
 export default function MainCardPage({allCardData, page, maxPage}: IMainCardPageProps) {
     const allCardTitleText = allCardData?.map((cardData) => cardData?.title).join(", ")
